@@ -153,21 +153,26 @@ section.active {
     margin-top: -1rem;
 }
 
+/*this prepares the skeleton and creates x->y->z->x...*/
 .home-detail h2 span {
     position: relative;
     display: inline-block;
     color: transparent;
-    -webkit-text-stroke: .07rem var(--main-color);
-    animation: display-text 16s linear infinite;
-    animation-delay: calc(-4s * var(--i));
+    -webkit-text-stroke: .07rem var(--main-color);/*the green outline*/
+    animation: display-text 12s linear infinite;
+    animation-delay: calc(-4s * var(--i));/*queues up each word*/
 }
 
 @keyframes display-text {
-    25%,100% {
+    /*real magic happens here, each word is only visible for 25% i.e. 4s of animation,
+    but with the custom --i variable we control when it starts in the animation.*/
+    33%,100% {
         display: none;
     }
 }
 
+/*this is where the text filling animation comes in with the right border as the moving
+cursor on the words*/
 .home-detail h2 span::before {
     content: attr(data-text);
     position: absolute;

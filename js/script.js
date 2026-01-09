@@ -1,7 +1,7 @@
-const navLinks = document.querySelectorAll('header nav a');
-const logoLink = document.querySelector('.logo');
-const sections = document.querySelectorAll('section');
-const menuIcon = document.querySelector('#menu-icon');
+const navLinks = document.querySelectorAll('header nav a');//Links in the navbar.
+const logoLink = document.querySelector('.logo');//The LZ logo(Legolas Zidane)
+const sections = document.querySelectorAll('section');//Different sections of each page.
+const menuIcon = document.querySelector('#menu-icon');//The hamburger menu icon on small screens.
 const navBar = document.querySelector('header nav');
 
 
